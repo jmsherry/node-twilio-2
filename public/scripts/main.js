@@ -5,7 +5,8 @@ smsForm.addEventListener("submit", (e) => {
   const formData = new FormData(smsForm);
   const data = Object.fromEntries(formData);
   console.log("data", data);
-  sendMessage(data)
+  sendMessage(data);
+  smsForm.reset();
 });
 
 async function sendMessage(data) {
@@ -20,10 +21,13 @@ async function sendMessage(data) {
 
     if (response.ok) {
       console.log("response", response);
+      alert(`Message sent`)
     } else {
+      
       throw new Error(response);
     }
   } catch (err) {
+    alert(`Error! Check console`)
     console.log("err", err.message || err.statusText);
   }
 }

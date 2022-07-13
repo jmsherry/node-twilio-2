@@ -9,6 +9,13 @@ const {
   TWILIO_TRIAL_NUMBER, // U.S Sender number
 } = process.env;
 
+console.log({
+  PORT,
+  TWILIO_ACCOUNT_SID,
+  TWILIO_AUTH_TOKEN,
+  TWILIO_TRIAL_NUMBER, // U.S Sender number
+})
+
 const client = require("twilio")(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
 
 const app = express();
