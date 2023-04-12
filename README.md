@@ -2,7 +2,7 @@
 
 
 ## Setup
-You need an environment with the following:
+You need an environment with the following (template in env.txt):
 ```bash
 TWILIO_ACCOUNT_SID=<SID>
 TWILIO_AUTH_TOKEN=<TOKEN>
